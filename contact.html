@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="UTF-8">
+      <title>Contactpagina</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+  <script defer src="js/fetchapi-and-validation.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body>
+    <nav class ="header-content-navigation">
+      <img src="images/Logo-Nick.png" class = "header-content-navigation__logo">
+        <ul>
+         <li class = "header-content-navigation__allnavigations"><a class = "header-content-navigation__allnavigations__pagelink" href = "#">Home</a></li>
+         <li class = "header-content-navigation__allnavigations"><a class = "header-content-navigation__allnavigations__pagelink" href = "#">About</a></li>
+          <li class = "header-content-navigation__allnavigations"><a class = "header-content-navigation__allnavigations__pagelink" href = "#">Skills</a></li>
+         <li class = "header-content-navigation__allnavigations"><a class = "header-content-navigation__allnavigations__pagelink" href = "contact.html">Contact</a></li>
+       </ul>
+     </nav> 
+  <form novalidate action="https://localhost:7298/api/Contact" method="post" id ="myForm" class="form-contactpagina">      
+    <input name="name" type="text" class="form-contactpagina__inputfield" maxlength="200" placeholder="Name" required />
+    <label for="email">
+      <input name="email" id = "email" type="email" class="form-contactpagina__inputfield" placeholder="Email" required minlength="8" />
+      <span class="error" aria-live="polite"></span>
+    </label>
+    <textarea name="text" class="form-contactpagina__inputfield-textcomment" maxlength="600" placeholder="Bericht" required ></textarea>
+    <input class="form-contactpagina__submit" type="submit" value="submit"/> 
+  </form>
+</body>
